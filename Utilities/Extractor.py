@@ -13,14 +13,14 @@ import numpy as np
 from scipy import signal
 from typing import List, Tuple
 
-def process_eeg(TIME_STEPS:int = 1200, included_states: List[str] =["Up", "Down", "Left", "Right", "Select"], subject_folder :str ='/kaggle/input/arabic-eeg-sessions/RecordedSessions/Antony')->Tuple[np.ndarray, np.array]:
+def process_eeg(TIME_STEPS:int = 1200, included_states: List[str] =["Up", "Down", "Left", "Right", "Select"], subject_folder :str ='./NPYData/Subject_0')->Tuple[np.ndarray, np.ndarray]:
     """
         Process EEG data files from a specified subject folder and extract relevant EEG data segments.
 
         Parameters:
         TIME_STEPS (int): The number of time steps for each EEG data segment. Default is 1200.
         included_states (list): List of states to include in the processing. Default is ["Up", "Down", "Left", "Right", "Select"].
-        subject_folder (str): Path to the folder containing EEG data files for the subject. Default is '/kaggle/input/arabic-eeg-sessions/RecordedSessions/Antony'.
+        subject_folder (str): Path to the folder containing EEG data files for the subject. Default is './NPYData/Subject_0'.
 
         Returns:
         tuple: A tuple containing:
@@ -37,17 +37,19 @@ def process_eeg(TIME_STEPS:int = 1200, included_states: List[str] =["Up", "Down"
     """
 
     files = os.listdir(subject_folder)
+    subjectID = subject_folder.split('_')[-1]
     dfs = []
-
     # Read and process each file
-    for subject, file in enumerate(files):
+    for file in files:
         if file.endswith('.csv'):
             df = pd.read_csv(os.path.join(subject_folder, file))
-            df['Subject'] = subject + 1
-            dfs.append(df[['EEG 1', 'EEG 2', 'EEG 3', 'EEG 4', 'EEG 5', 'EEG 6', 'EEG 7', 'EEG 8', 'State', 'Subject']])
+        elif file.endswith('.npy'):
+            df = pd.DataFrame(np.load(os.path.join(subject_folder, file),allow_pickle=True)).rename({0:'EEG 1', 1:'EEG 2', 2:'EEG 3', 3:'EEG 4', 4:'EEG 5', 5:'EEG 6', 6:'EEG 7', 7:'EEG 8', 17:'State'}, axis=1)
         else:
             #Skipping non-CSV file
             continue
+        df['Subject'] = subjectID
+        dfs.append(df[['EEG 1', 'EEG 2', 'EEG 3', 'EEG 4', 'EEG 5', 'EEG 6', 'EEG 7', 'EEG 8', 'State', 'Subject']])
 
     # Process EEG data for each state
     all_state_data = []
