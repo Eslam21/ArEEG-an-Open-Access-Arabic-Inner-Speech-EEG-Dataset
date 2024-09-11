@@ -1,4 +1,4 @@
-from Utilities import process_eeg
+from Utilities.Extractor import process_eeg
 import os
 from concurrent.futures import ProcessPoolExecutor
 
