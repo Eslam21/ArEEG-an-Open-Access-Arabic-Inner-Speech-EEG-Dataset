@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it using the following metadata."
+title: "ArEEG: Arabic Inner Speech EEG dataset"
+authors:
+  - family-names: Metwalli
+    given-names: Donia
+  - family-names: Ahmed
+    given-names: Eslam
+  - family-names: Emil
+    given-names: Antony
+  - family-names: Radwan
+    given-names: Yousef A.
+  - family-names: Barakat
+    given-names: Mariam
+  - family-names: Ahmed
+    given-names: Anas
+  - family-names: Omar
+    given-names: Amro
+  - family-names: Selim
+    given-names: Sahar
+date-released: 2025-01-01
+doi: 10.18112/openneuro.ds005262.v1.0.1
+version: 1.0.1
+repository-code: "https://openneuro.org/datasets/ds005262"
+publisher: OpenNeuro
