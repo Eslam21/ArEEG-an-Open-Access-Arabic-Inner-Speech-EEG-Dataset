@@ -13,17 +13,14 @@ import numpy as np
 from scipy import signal
 from typing import List, Tuple
 
-def process_eeg(TIME_STEPS:int = 1200,
-                included_states: List[str] =["Up", "Down", "Left", "Right", "Select"], 
-                subject_folder :str ='/kaggle/input/arabic-eeg-sessions/RecordedSessions/Antony'
-                )->Tuple[np.ndarray, np.array]:
+def process_eeg(TIME_STEPS:int = 1200, included_states: List[str] =["Up", "Down", "Left", "Right", "Select"], subject_folder :str ='/kaggle/input/arabic-eeg-sessions/RecordedSessions/Antony')->Tuple[np.ndarray, np.array]:
     """
         Process EEG data files from a specified subject folder and extract relevant EEG data segments.
 
         Parameters:
         TIME_STEPS (int): The number of time steps for each EEG data segment. Default is 1200.
         included_states (list): List of states to include in the processing. Default is ["Up", "Down", "Left", "Right", "Select"].
-        subject_folder (str): Path to the folder containing EEG data files for the subject.
+        subject_folder (str): Path to the folder containing EEG data files for the subject. Default is '/kaggle/input/arabic-eeg-sessions/RecordedSessions/Antony'.
 
         Returns:
         tuple: A tuple containing:
