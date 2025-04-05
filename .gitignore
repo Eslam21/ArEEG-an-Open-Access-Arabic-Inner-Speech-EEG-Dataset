@@ -1,0 +1,4 @@
+toNPY.py
+__pycache__/*
+*.pyc
+./CSVData
