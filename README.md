@@ -4,12 +4,13 @@ Welcome to the official repository for **ArEEG**, the **first open-access EEG da
 
 All the code and scripts provided here will help you **reproduce experiments**, **process EEG signals**, and **build classification models** based on the dataset.
 
-📂 The dataset is hosted publicly on **OpenNeuro**:  
-👉 [https://openneuro.org/datasets/ds005262/](https://openneuro.org/datasets/ds005262/)
+📂 The dataset is hosted publicly on:  
+👉 [**OpenNeuro**](https://openneuro.org/datasets/ds005262/)  
+👉 [**Kaggle**](https://www.kaggle.com/datasets/eslam101ahmed/arabic-eeg-sessions)
 
 ---
 
-## 📜 Citation
+### 📜 Citation
 
 If you use the ArEEG dataset in your work, please cite it as follows:
 
