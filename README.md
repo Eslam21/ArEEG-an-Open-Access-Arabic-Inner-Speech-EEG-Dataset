@@ -29,7 +29,7 @@ The dataset is hosted publicly on:
 
 To make it easy to get started, we provide a multi-version Kaggle notebook of preliminary results 
 
-[**Arabic EEG Modeling**](https://www.kaggle.com/code/eslam101ahmed/arabic-eeg-modeling)  
+- [**Arabic EEG Modeling**](https://www.kaggle.com/code/eslam101ahmed/arabic-eeg-modeling)  
 
 ## Publication
 📄 [**Official publication in Scientific Data (Nature)**](https://doi.org/10.1038/s41597-025-05387-w)
@@ -55,3 +55,4 @@ If you use the ArEEG dataset in your work, please cite it as follows:
   month = aug 
 }
 ```
+
