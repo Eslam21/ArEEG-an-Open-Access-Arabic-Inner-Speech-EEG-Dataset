@@ -1,12 +1,38 @@
 # 🧠 ArEEG: An Open-Access Arabic Inner Speech EEG Dataset
 
-Welcome to the official repository for **ArEEG**, the **first open-access EEG dataset** capturing **inner speech in Arabic**. This dataset is designed to facilitate research in **brain-computer interfaces (BCI)**, **Arabic language processing**, and **neuro-linguistics**.
+Welcome to the official repository for **ArEEG**, the **first open-access EEG dataset** capturing **inner speech in Arabic**.  
+This dataset enables research in **brain-computer interfaces (BCI)**, **Arabic language processing**, and **neuro-linguistics**.
 
-All the code and scripts provided here will help you **reproduce experiments**, **process EEG signals**, and **build classification models** based on the dataset.
+The repository provides all the necessary **code and scripts** to:  
+- 🧩 Reproduce the experiments  
+- ⚡ Process raw EEG signals  
+- 🤖 Train and evaluate classification models  
 
-📂 The dataset is hosted publicly on:  
-👉 [**OpenNeuro**](https://openneuro.org/datasets/ds005262/)  
-👉 [**Kaggle**](https://www.kaggle.com/datasets/eslam101ahmed/arabic-eeg-sessions)
+---
+
+## 🚀 Key Features
+
+- 👥 **12 native Arabic participants** (balanced gender distribution, aged 17–25)  
+- 🧩 **5 inner speech commands**: *Up, Down, Left, Right, Select*  
+- 🎧 **8-channel EEG headset** (Unicorn Hybrid Black+, 250 Hz sampling rate)  
+- 🧪 **4650 trials** across 15 sessions per subject (one with 21 sessions)  
+- 💻 **Open-source preprocessing & ML pipelines** (Python, NumPy, Pandas, Scikit-learn, MNE)  
+- 🌍 **First-ever open Arabic inner speech dataset** for BCI research  
+
+---
+
+## 📂 Dataset Access and Notebooks
+
+The dataset is hosted publicly on:  
+- 📦 [**OpenNeuro**](https://openneuro.org/datasets/ds005262/)  
+- 📊 [**Kaggle**](https://www.kaggle.com/datasets/eslam101ahmed/arabic-eeg-sessions) (data can be found in **RecordedSessions** folder)  
+
+To make it easy to get started, we provide a multi-version Kaggle notebook of preliminary results 
+
+[**Arabic EEG Modeling**](https://www.kaggle.com/code/eslam101ahmed/arabic-eeg-modeling)  
+
+## Publication
+📄 [**Official publication in Scientific Data (Nature)**](https://doi.org/10.1038/s41597-025-05387-w)
 
 ---
 
@@ -14,12 +40,18 @@ All the code and scripts provided here will help you **reproduce experiments**, 
 
 If you use the ArEEG dataset in your work, please cite it as follows:
 
-```latex
-@dataset{ds005262:1.0.1,
-  author    = {Donia Metwalli and Eslam Ahmed and Antony Emil and Yousef A. Radwan and Mariam Barakat and Anas Ahmed and Amro Omar and Sahar Selim},
-  title     = {ArEEG: Arabic Inner Speech EEG dataset},
-  year      = {2025},
-  doi       = {10.18112/openneuro.ds005262.v1.0.1},
-  publisher = {OpenNeuro}
+```bibtex
+@article{Metwalli2025,
+  title = {ArEEG: an Open-Access Arabic Inner Speech EEG Dataset},
+  volume = {12},
+  ISSN = {2052-4463},
+  url = {http://dx.doi.org/10.1038/s41597-025-05387-w},
+  DOI = {10.1038/s41597-025-05387-w},
+  number = {1},
+  journal = {Scientific Data},
+  publisher = {Springer Science and Business Media LLC},
+  author = {Metwalli,  Donia and Kiroles,  Antony E. and Radwan,  Yousef A. and Mohamed,  Eslam Ahmed and Barakat,  Mariam and Ahmed,  Anas and Omar,  Amr M. and Selim,  Sahar},
+  year = {2025},
+  month = aug 
 }
 ```
