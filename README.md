@@ -3,10 +3,10 @@
 Welcome to the official repository for **ArEEG**, the **first open-access EEG dataset** capturing **inner speech in Arabic**.  
 This dataset enables research in **brain-computer interfaces (BCI)**, **Arabic language processing**, and **neuro-linguistics**.
 
-The repository provides all the necessary **code and scripts** to:  
-- 🧩 Reproduce the experiments  
-- ⚡ Process raw EEG signals  
-- 🤖 Train and evaluate classification models  
+The repository provides all the necessary **code and scripts** for:   
+- Data loading & preprocessing: dataloader.py  
+- Getting started quickly: areeg-starter.ipynb
+- Reproducing the experiments
 
 ---
 
@@ -55,4 +55,5 @@ If you use the ArEEG dataset in your work, please cite it as follows:
   month = aug 
 }
 ```
+
 
